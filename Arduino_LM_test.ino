@@ -1,10 +1,11 @@
 #define PWMPin 3
-int value = 0;
+int value = 63;
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
   pinMode(PWMPin, OUTPUT);
+  analogWrite(PWMPin, value);
   
   while(!Serial)
   {
